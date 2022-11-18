@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{url_for('static',filename='css/style.css')}}">
+    <title>IBM_AI</title>
+</head>
+<body>
+    <nav>
+        <h1>Nutrition Analyser</h1>
+    </nav>
+    <div class="search">
+        <img src="{{url_for('static',filename='Fruits_bg.jpg')}}" alt="img.png">
+    <div class="details">
+        <div class="col-lg-6"> 
+            <h2>Nutrition For Fitness Enthuisastic</h2>
+            <h3>What you eat, and when, has a big impact on your energy level and how well you recover from a workout.You might be surprised how many active adults overlook the importance of nutrition basics — and then run short on key nutrients.
+
+                Not getting enough vitamins, minerals and other nutrients can compromise your health and your performance.
+                
+                Yet fueling up for activity is as easy as following the well-established rules of a healthy diet: Eat plenty of fruits and vegetables, consume lean proteins, eat healthy fats, get your whole-grain carbohydrates, and drink plenty of fluids, especially water.
+                
+                Give your body the energy it needs to do the job you want — even if you are trying to lose weight.
+
+Skimping on nutrition can reduce muscle mass, lower bone density and cause fatigue. This puts you at risk of injury and illness, increases recovery time, causes hormonal problems, and, for women, menstrual issues.
+
+Make sure your diet plan supplies enough nutrient-dense calories so you can exercise and stay injury-free and healthy.
+            </h3>
+            <form action="/getdata" method="post" enctype="multipart/form-data">
+                <button type="submit" name="Classify-btn" class="Classify-btn">Classify</button>
+            </form>
+
+        </div>
+    </div>
+    <script type="text/javascript">
+       
+    </script>
+</body>
+</html>
