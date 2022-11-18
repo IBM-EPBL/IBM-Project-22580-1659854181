@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{url_for('static',filename='css/style.css')}}">
+    <title>IBM_AI</title>
+</head>
+<body>
+    <nav>
+        <h1>Nutrition Analyser</h1>
+    </nav>
+    <form action="/prediction" method="post" enctype="multipart/form-data">
+    <div class="search">
+        <img src="{{url_for('static',filename='Fruits_bg.jpg')}}" alt="img.png">
+        <div class="search_box">
+            <h2>Upload the Image!!</h2>
+            
+            <input type="file" id="img" name="img" onchange="previewimg();">
+            <button type="submit" name="btn">Submit</button>
+            <div class="search_info">
+                <img id="uploadPreview"><br><br><br><br><br><br>
+                <h4>{{Name}}</h4>
+                <h3>{{info}}</h3>
+            </div>
+        </div>
+            
+    </div>
+    </form>
+    <script type="text/javascript">
+        function previewimg(){
+            var oFReader =new FileReader();
+            oFReader.readAsDataURL(document.getElementById("img").files[0]);
+
+            oFReader.onload =function(oFREvent){
+                document.getElementById("uploadPreview").src=oFREvent.target.result;
+
+            }
+        }
+    </script>
+</body>
+</html>
